@@ -1,0 +1,32 @@
+\documentclass{scrreprt}
+\KOMAoptions{parskip=half*}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{mathtools}
+\numberwithin{equation}{chapter}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem{exs}{Exercise}[chapter]
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage[chapter,newfloat=true]{minted}
+\usemintedstyle[haskell]{lovelace}
+\newminted[code]{haskell}{bgcolor=bgh}
+\newminted[spec]{haskell}{bgcolor=bgh}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{tfwh.bib}
+
+\begin{document}
+\definecolor{bgh}{rgb}{0.95,0.95,0.95}
+\title{Haskell Intensivkurs}
+\author{Oliver Krischer}
+\subtitle{Solutions to the exercises from the textbook with the same title \footfullcite{intensiv11}}
+\maketitle
+\tableofcontents
+\setcounter{chapter}{1}
+
+\input{chapter02/Chapter02.tex}
+
+\printbibliography
+
+\end{document}
